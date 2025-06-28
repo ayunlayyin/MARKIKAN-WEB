@@ -1,0 +1,219 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Umum */
+.register-page {
+  background: #fff7ed;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container utama */
+.register-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
+.register-logo,
+.logo img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+/* Tulisan 'mari makan' */
+.brand-text {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 22px;
+  color: #f5a623;
+  margin: 5px 0;
+}
+
+/* Judul ajakan */
+.headline {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+/* Tombol sosial umum */
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover efek umum */
+.social-button:hover {
+  transform: scale(1.03);
+}
+
+/* Ikon dalam tombol */
+.social-button img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Tombol Google */
+.social-button.google {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #ddd;
+}
+
+/* Tombol Buat Akun */
+.create-btn,
+.social-button.signup {
+  display: inline-block;
+  background-color: #ff5722;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 15px auto;
+  border: none;
+}
+
+.create-btn:hover,
+.social-button.signup:hover,
+.create-btn:focus,
+.social-button.signup:focus {
+  background-color: #e64a19;
+  box-shadow: 0 4px 8px rgba(230, 74, 25, 0.5);
+  outline: none;
+  text-decoration: none;
+}
+
+/* Redirect link */
+.login-redirect {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-redirect a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* Form Style untuk form_daftar.php */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-box input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-box button {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto 0 auto;
+}
+
+/* Background Shapes */
+.background-shape {
+  position: absolute;
+  z-index: 0;
+}
+
+.triangle-top-left {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-bottom: 100px solid #fdb849;
+}
+
+.triangle-middle-left {
+  bottom: 40%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-top: 50px solid #fdb849;
+}
+
+.triangle-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-top: 120px solid #fdb849;
+}
+
+/* Responsive */
+@media (min-width: 480px) {
+  .create-btn,
+  .social-button.signup {
+    width: auto;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-container {
+    padding: 20px 15px;
+  }
+
+  .form-box input,
+  .create-btn,
+  .social-button {
+    width: 100%;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("assets/bgputih.jpg");
+  color: #333;
+}
+
+/* Container utama */
+.container {
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #ff6347;
+}
+
+header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Kotak pencarian */
+.search-box {
+  margin: 15px auto;
+  padding: 0 10px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+
+/* Judul bagian */
+.section-title {
+  font-size: 18px;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+/* Scroll menu horizontal */
+.menu-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  scrollbar-width: none; /* Firefox */
+}
+
+.menu-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Kartu menu */
+.menu-card {
+  flex: 0 0 auto;
+  width: 140px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-card .plus {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #ff6347;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu-card .price {
+  color: #ff6347;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.menu-card .name {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.footer-icon {
+  font-size: 20px;
+  color: #999;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #fdb849;
+}
+
+.footer-icon.active {
+  color: #fdb849;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .menu-scroll {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .menu-card {
+    flex: 0 0 auto;
+    width: 130px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .footer-icon {
+    font-size: 22px;
+  }
+}
